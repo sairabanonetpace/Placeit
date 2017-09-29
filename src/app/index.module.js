@@ -29,7 +29,7 @@
             'app.dashboards',
             'app.calendar',
             //'app.e-commerce',
-            'app.mail',
+            //'app.mail',
             /*
             'app.chat',
             'app.file-manager',
@@ -39,9 +39,10 @@
             'app.todo',
             'app.contacts',
             'app.notes',
+            'app.requests',
 
             // Pages
-            //'app.pages',
+            'app.pages',
 
             // User Interface
             //'app.ui',
