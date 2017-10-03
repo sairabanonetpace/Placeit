@@ -34,8 +34,8 @@
             classic: 'app/main/apps/requests/views/classic/classic-view.html',
             outlook: 'app/main/apps/requests/views/outlook/outlook-view.html'
         };
-        vm.defaultView = 'outlook';
-        vm.currentView = 'outlook';
+        vm.defaultView = 'classic';
+        vm.currentView = 'classic';
 
         // Methods
         vm.loadFolder = loadFolder;
@@ -104,8 +104,8 @@
                                 "subject": "Commits that need to be pushed lorem ipsum dolor sit amet, consectetur adipiscing elit.",
                                 "message": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce lorem diam, pulvinar id nisl non, ultrices maximus nibh. Suspendisse ut justo velit. Nullam ac ultrices risus, quis auctor orci. Vestibulum volutpat nisi et neque porta ullamcorper. Maecenas porttitor porta erat ac suscipit. Sed cursus leo ut elementum fringilla. Maecenas semper viverra erat, vel ullamcorper dui efficitur in. Vestibulum placerat imperdiet tellus, et tincidunt eros posuere eget. Proin sit amet facilisis libero. Nulla eget est ut erat aliquet rhoncus. Quisque ac urna vitae dui hendrerit sollicitudin vel id sem. </p><p> In eget ante sapien. Quisque consequat velit non ante finibus, vel placerat erat ultricies. Aliquam bibendum justo erat, ultrices vehicula dolor elementum a. Mauris eu nisl feugiat ligula molestie eleifend. Aliquam efficitur venenatis velit ac porta. Vivamus vitae pulvinar tellus. Donec odio enim, auctor eget nibh mattis, ultricies dignissim lacus. Phasellus non tincidunt dui. Nulla eu arcu lorem. </p><p> Donec non hendrerit augue, lobortis sollicitudin odio. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Duis sit amet euismod enim, eget vestibulum justo. Fusce a placerat lectus, eget feugiat purus. Cras risus ante, faucibus eget justo commodo, volutpat tempor ante. Donec sit amet leo venenatis, gravida quam sit amet, blandit dui. In quam ante, elementum ut faucibus nec, tristique vitae dui. Praesent vel erat at enim placerat luctus vel ut ipsum. In congue tempor mi, non ornare lectus condimentum at. Aenean libero diam, finibus eget sapien et, tristique fermentum lorem. </p>",
                                 "time": "28 Jun",
-                                "read": false,
-                                "starred": false,
+                                "read": true,
+                                "starred": true,
                                 "important": true,
                                 "hasAttachments": true,
                                 "attachments": [
@@ -131,8 +131,73 @@
                                         "size": "17Mb"
                                     }
                                 ],
-                                "labels": [
-                                    1
+                                "labels": [2],
+                                "skills":["Java","PHP","C++"],
+                                "Qualifications":["BSCS","MSCS"],
+                                "userResponses":[
+                                    {
+                                        "requestDetails":{
+                                            "requestType":"Apply",
+                                            "postUserDetails":{
+                                                "name":"Alice Freeman",
+                                                "userType":"Sider",
+                                                "avatar": "assets/images/avatars/alice.jpg",
+                                            },
+                                            "createdDate":"28 Jun, 2017",
+                                            "userResponses":[
+                                                {
+                                                    "requestDetails":{
+                                                        "requestType":"Accept",
+                                                        "postUserDetails":{
+                                                            "name":"Alice Freeman",
+                                                            "userType":"Sider",
+                                                            "avatar": "assets/images/avatars/vincent.jpg",
+                                                        },
+                                                        "createdDate":"28 Jun, 2017",
+                                                        "userResponses":[
+                                                            {
+                                                                "requestDetails":{
+                                                                    "requestType":"Start",
+                                                                    "postUserDetails":{
+                                                                        "name":"David",
+                                                                        "userType":"Sider",
+                                                                        "avatar": "assets/images/avatars/vincent.jpg",
+                                                                    },
+                                                                    "createdDate":"28 Jun, 2017",
+                                                                    "userResponses":[
+                                                                        {
+                                                                            "requestDetails":{
+                                                                                "requestType":"Complete",
+                                                                                "postUserDetails":{
+                                                                                    "name":"David ",
+                                                                                    "userType":"Sider",
+                                                                                    "avatar": "assets/images/avatars/vincent.jpg",
+                                                                                },
+                                                                                "createdDate":"28 Jun, 2017",
+                                                                                "userResponses":[
+                                                                                    {
+                                                                                        "requestDetails":{
+                                                                                            "requestType":"Payment",
+                                                                                            "postUserDetails":{
+                                                                                                "name":"David",
+                                                                                                "userType":"Sider",
+                                                                                                "avatar": "assets/images/avatars/vincent.jpg",
+                                                                                            },
+                                                                                            "createdDate":"28 Jun, 2017"
+                                                                                        }
+                                                                                    }
+                                                                                ]
+                                                                            }
+                                                                        }
+                                                                    ]
+                                                                }
+                                                            }
+                                                        ]
+                                                    }
+                                                }
+                                            ]
+                                        },
+                                    }
                                 ]
                             }];
                     // Hide the loading screen

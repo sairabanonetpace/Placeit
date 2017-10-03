@@ -1,0 +1,65 @@
+<div class="thread">
+
+    <div layout="row" layout-align="start center">
+        <!--<md-checkbox class="no-label"
+                     ng-checked="vm.isSelected(thread)"
+                     ng-click="vm.toggleSelectThread(thread, $event)"
+                     aria-label="{{vm.isSelected(thread) ? 'Deselect' : 'Select'}}">
+        </md-checkbox>-->
+
+        <div class="info" flex layout="column">
+            <div class="name" layout="row" layout-align="start center">
+                <img class="avatar" ng-if="response.requestDetails.postUserDetails.avatar" alt="{{response.requestDetails.postUserDetails.name}}"
+                     ng-src="{{response.requestDetails.postUserDetails.avatar}}"/>
+
+                    <span class="text-truncate">{{response.requestDetails.postUserDetails.name}}, <b>{{response.requestDetails.requestType}}</b></span>
+
+            </div>
+
+        </div>
+
+        <div layout="column" layout-align="space-between end">
+            <div class="time">{{response.requestDetails.createdDate}}</div>
+
+            <div class="actions" layout="row" layout-align="start center">
+
+                        <md-menu>
+                            <md-button class="md-icon-button" aria-label="More" translate
+                                       translate-attr-aria-label="CONTACTS.MORE">
+                                <md-icon md-font-icon="icon-dots-vertical" ng-click="$mdMenu.open($event)"></md-icon>
+                            </md-button>
+
+                            <md-menu-content width="3">
+                                <md-menu-item>
+                                    <md-button ng-click="vm.deleteContactConfirm(contact, ev)"
+                                               translate="CONTACTS.DELETE_CONTACT">
+                                        Delete Contact
+                                    </md-button>
+                                </md-menu-item>
+
+                                <md-divider ng-if="vm.user.groups"></md-divider>
+
+                                <md-subheader class="md-no-sticky" ng-if="vm.user.groups">Groups</md-subheader>
+
+                                <md-list-item ng-if="vm.user.groups" ng-repeat="group in vm.user.groups"
+                                              ng-click="vm.toggleInArray(contact.id,group.contactIds)">
+                                    <p class="pl-8"
+                                       ng-style="vm.exists(contact.id,group.contactIds) && {'font-weight':'500'}">
+                                        {{group.name}}
+                                    </p>
+                                </md-list-item>
+
+                            </md-menu-content>
+                        </md-menu>
+
+                    </div>
+        </div>
+    </div>
+    <div ng-if="response.requestDetails.userResponses.length > 0">
+        <div class="" layout-wrap layout="row">
+            <div ng-repeat="response in response.requestDetails.userResponses" flex  style="margin-top:10px;margin-left:20px">
+                <request-response-expension response="response"></request-response-expension>
+            </div>
+        </div>
+    </div>
+</div>

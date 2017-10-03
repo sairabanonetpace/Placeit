@@ -111,10 +111,15 @@
     </div>
 
     <div ng-bind-html="vm.currentThread.message"></div>
+    <table class="table table-responsive" flex>
 
+        <tr ng-repeat="(key, value) in vm.currentThread" property-display="row" property="value" data="key" style="border: 0;" 
+        ng-if="!(key == 'id' || key == 'message' || key == 'subject' || key == 'from' || key == 'to' || key == 'time' || key == 'read' || key == 'starred' || key == 'important' || key == 'hasAttachments' || key == 'attachments' || key == 'labels' || key == 'userResponses')"></tr>
+
+    </table>
 </div>
 
-<div ng-if="vm.currentThread.attachments" class="thread-attachments">
+<!--<div ng-if="vm.currentThread.attachments" class="thread-attachments">
     <div class="title">
         <span translte="MAIL.ATTACHMENTS">Attachments</span> ({{vm.currentThread.attachments.length}})
     </div>
@@ -129,6 +134,17 @@
 
                 <div class="size">({{attachment.size}})</div>
             </div>
+        </div>
+    </div>
+</div>-->
+
+<div class="thread-attachments">
+    <div class="title">
+        <span>Responses</span> ({{vm.currentThread.userResponses.length}})
+    </div>
+    <div class="" layout-wrap layout="row">
+        <div ng-repeat="response in vm.currentThread.userResponses" flex>
+            <request-response-expension response="response"></request-response-expension>
         </div>
     </div>
 </div>
